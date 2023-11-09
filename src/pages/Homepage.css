@@ -1,0 +1,7 @@
+.search-and-add {
+    display: flex;
+    justify-content: space-between; /* Adjust this to space-around or flex-start as needed */
+    align-items: center;
+    padding: 0 60px; /* This padding is to align with the h1 padding */
+  }
+  

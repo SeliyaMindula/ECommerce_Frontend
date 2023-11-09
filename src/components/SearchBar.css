@@ -1,0 +1,38 @@
+.search-bar {
+    padding-left: 60px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-right: auto; /* Push everything to the right */
+  }
+  
+  .search-input {
+    padding: 8px 16px; /* Vertical and horizontal padding */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 20px; /* Rounded borders */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Maximum width, adjust as needed */
+    outline: none; /* Remove the outline */
+  }
+  
+  .search-input:focus {
+    border-color: #001EB9; /* Blue border on focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Glow effect on focus */
+  }
+  
+  .search-button {
+    padding: 8px 16px; /* Padding to match input */
+    background-color: #001EB9; /* Blue background */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded borders */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove the outline */
+  }
+  
+  .search-button:hover,
+  .search-button:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+  }
+  
+  /* You might want to add styles for disabled state, etc. */
+  

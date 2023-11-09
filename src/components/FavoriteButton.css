@@ -1,0 +1,21 @@
+.favorite-button {
+    border: 2px solid #0056b3; /* Blue border */
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px 10px; /* Padding around the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove the outline */
+    display: flex; /* To center the icon within the button */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .favorite-button .star-icon {
+    fill: #0056b3; /* Blue color for the star icon */
+    /* If your SVG doesn't respect the fill property, you may need to set the color in the SVG file itself */
+  }
+  
+  .favorite-button.active .star-icon {
+    fill: #003d82; /* A darker blue color to indicate active/favorite state */
+  }
+  

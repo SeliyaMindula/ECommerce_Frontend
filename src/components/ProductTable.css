@@ -1,0 +1,49 @@
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .product-table th {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .product-table td {
+    background-color: #fff;
+  }
+  
+  .product-table .product-image {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  /* Additional styles for your favorite button and other actions */
+  .favorite-button {
+    /* Your styles for the favorite button */
+  }
+  
+  /* You may want to style the last cell to align the buttons to the right */
+  .product-table td:last-child {
+    text-align: right;
+  }
+  
+  /* Hover effect for rows */
+  .product-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Ensure the images in the cells are not too large */
+  .product-image {
+    height: auto;
+    max-width: 100%; /* Ensures the image is contained within the cell */
+    display: block;
+  }
+  
