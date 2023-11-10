@@ -44,9 +44,23 @@ const ProductPage = () => {
       });
 
       console.log(response.data); // Handle the response as needed
-      // You may want to reset the form or navigate the user to a different page
+      
+      if(response.data) {
+        // Here you can handle the response
+        alert('Product added successfully!');
+        // Reset the form if needed
+        setProduct({
+          sku: "",
+          name: "",
+          qty: "",
+          description: "",
+          images: [],
+        });
+      }
     } catch (error) {
-      console.error('Error submitting product:', error);
+      console.error('Error submitting product:', error.response.data.message);
+      // Here you can handle the error
+      alert('Failed to add product. Please try again.');
     }
   };
 
