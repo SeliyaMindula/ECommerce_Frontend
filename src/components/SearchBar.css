@@ -1,39 +1,38 @@
 .search-bar {
-    padding-left: 60px;
-    display: flex;
-    align-items: center; /* Center items vertically */
-    margin-right: auto; /* Push everything to the right */
-    border: 1px solid #F7F7F7;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .search-input {
-    flex-grow: 1; /* Ensures the input takes up available space */
-    border: none; /* No border for the input */
-    padding: 10px 20px; /* Padding inside the input */
-    outline: none; /* Removes the highlight outline */
-  }
-  
-  .search-input:focus {
-    border-color: #001EB9; /* Blue border on focus */
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Glow effect on focus */
-  }
-  
-  .search-button {
-    padding: 8px 16px; /* Padding to match input */
-    background-color: #001EB9; /* Blue background */
-    border: none; /* No border */
-    border-radius: 20px; /* Rounded borders */
-    color: white; /* White text */
-    cursor: pointer; /* Pointer cursor on hover */
-    outline: none; /* Remove the outline */
-  }
-  
-  .search-button:hover,
-  .search-button:focus {
-    background-color: #0056b3; /* Darker blue on hover/focus */
-  }
-  
-  /* You might want to add styles for disabled state, etc. */
-  
+  padding-left: 60px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-right: auto; /* Push everything to the right */
+  border: 1px solid #F7F7F7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex-grow: 1; /* Ensures the input takes up available space */
+  border: none; /* No border for the input */
+  padding: 10px 20px; /* Padding inside the input */
+  outline: none; /* Removes the highlight outline */
+}
+
+.search-input:focus {
+  border-color: #001EB9; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Glow effect on focus */
+}
+
+.search-button {
+  padding: 8px 16px; /* Padding to match input */
+  background-color: #001EB9; /* Blue background */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded borders */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove the outline */
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #0056b3; /* Darker blue on hover/focus */
+}
+
+/* You might want to add styles for disabled state, etc. */

@@ -160,6 +160,7 @@ const EditProductPage = () => {
               name="images"
               onChange={handleImageChange}
               multiple
+              accept="image/png, image/jpeg, image/gif" // Accepts PNG, JPEG, and GIF formats
             />
           </div>
         </div>

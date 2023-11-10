@@ -4,6 +4,7 @@ import ProductPage from './pages/ProductPage';
 import HomePage from'./pages/Homepage';
 import FavProductPage from './pages/FavProductPage';
 import EditProductPage from './pages/EditProductpage';
+import SearchResultsPage from './pages/SearchResultspage';
 
 // ... other imports
 
@@ -15,7 +16,7 @@ function App() {
         <Route path="/products" element={<ProductPage />} />
         <Route path="/Favorite" element={<FavProductPage />} />
         <Route path="/edit-products/:id" element={<EditProductPage />} />
-      
+        <Route path="/search" element={<SearchResultsPage />} />
         {/* Define other routes */}
       </Routes>
     </BrowserRouter>
