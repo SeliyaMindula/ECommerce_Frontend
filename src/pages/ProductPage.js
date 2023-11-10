@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'; // Import Axios
 import Header from "../components/Header";
 import "./Productpage.css";
 
@@ -20,15 +21,38 @@ const ProductPage = () => {
     setProduct({ ...product, images: e.target.files });
   };
 
-  const handleSubmit = (e) => {
+  // Updated handleSubmit function
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process the form data here, e.g., send it to a server
+
+    const formData = new FormData();
+    formData.append('sku', product.sku);
+    formData.append('name', product.name);
+    formData.append('qty', product.qty);
+    formData.append('description', product.description);
+
+    // Append images to formData
+    Array.from(product.images).forEach((image) => {
+      formData.append('images', image);
+    });
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/products/add', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      console.log(response.data); // Handle the response as needed
+      // You may want to reset the form or navigate the user to a different page
+    } catch (error) {
+      console.error('Error submitting product:', error);
+    }
   };
 
   return (
     <>
       <Header />
-
       <h1 style={{ paddingLeft: "140px" }}>PRODUCTS</h1>
       <form onSubmit={handleSubmit} className="form-margin">
         <div className="form-group row">
