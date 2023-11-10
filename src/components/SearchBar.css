@@ -3,7 +3,7 @@
     display: flex;
     align-items: center; /* Center items vertically */
     margin-right: auto; /* Push everything to the right */
-    border: 1px solid #ccc;
+    border: 1px solid #F7F7F7;
     border-radius: 20px;
     overflow: hidden;
   }

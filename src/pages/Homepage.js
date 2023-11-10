@@ -38,19 +38,23 @@ const HomePage = () => {
   );
 
   const handleAddProduct = () => {
-    // Implement your logic for adding a new product here
     navigate('/products');
     console.log('Add new product button clicked');
+  };
+
+  const handleFavorite = () => {
+    navigate('/Favorite');
+    console.log('Favorite button clicked');
   };
 
   return (
     <div className="homepage">
       <Header />
-      <h1 style={{ paddingLeft: '110px' }}>Products</h1>
+      <h1 style={{ paddingLeft: '60px' }}>PRODUCTS</h1>
       <div className="search-and-add">
         <SearchBar onSearch={handleSearch} />
         <NewProductButton onAddProduct={handleAddProduct} />
-        <FavoriteButton/>
+        <FavoriteButton onFavorite={handleFavorite}/>
       </div>
       <ProductTable/>
     </div>

@@ -1,8 +1,12 @@
 /* ProductTable.css */
+
 .product-table {
-  width: 100%;
+  width: 92%;
   border-collapse: collapse;
-  margin: 20px; /* Add a margin if you want space around the table */
+  margin-left: 60px; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+
 }
 
 .product-table th,
