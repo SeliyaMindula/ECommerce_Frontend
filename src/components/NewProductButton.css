@@ -1,7 +1,10 @@
 /* NewProductButton.css */
+.pdl{
+  padding-right: 10px;
+}
 .new-product-button {
     padding: 10px 20px; /* Adjust padding to fit your design */
-    background-color: #0056b3; /* A blue background color */
+    background-color: #001EB9; /* A blue background color */
     color: white; /* White text */
     border: none; /* Remove the default border */
     border-radius: 5px; /* Slightly rounded corners */
@@ -15,12 +18,12 @@
   
   .new-product-button:hover,
   .new-product-button:focus {
-    background-color: #003d82; /* Darker blue on hover/focus */
+    background-color: #001EB9; /* Darker blue on hover/focus */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Larger shadow for hover/focus */
   }
   
   .new-product-button:active {
-    background-color: #002a5c; /* Even darker blue for active state */
+    background-color: #001EB9; /* Even darker blue for active state */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Revert shadow to original on active state */
   }
   

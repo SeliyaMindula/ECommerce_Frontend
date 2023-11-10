@@ -3,15 +3,16 @@
     display: flex;
     align-items: center; /* Center items vertically */
     margin-right: auto; /* Push everything to the right */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
   }
   
   .search-input {
-    padding: 8px 16px; /* Vertical and horizontal padding */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 20px; /* Rounded borders */
-    width: 100%; /* Full width */
-    max-width: 300px; /* Maximum width, adjust as needed */
-    outline: none; /* Remove the outline */
+    flex-grow: 1; /* Ensures the input takes up available space */
+    border: none; /* No border for the input */
+    padding: 10px 20px; /* Padding inside the input */
+    outline: none; /* Removes the highlight outline */
   }
   
   .search-input:focus {
