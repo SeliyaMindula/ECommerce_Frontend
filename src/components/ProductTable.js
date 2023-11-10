@@ -5,6 +5,8 @@ import "./ProductTable.css";
 import { ReactComponent as DeleteIcon } from "../asserts/delete-icon.svg";
 import { ReactComponent as EditIcon } from "../asserts/edit-icon.svg";
 import { ReactComponent as StarIcon } from "../asserts/star.svg";
+import { useNavigate } from 'react-router-dom';
+
 
 const ProductTable = () => {
   const [products, setProducts] = useState([]);
@@ -41,6 +43,14 @@ const ProductTable = () => {
       }
     }
   };
+  const [editingProduct, setEditingProduct] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleEditClick = (product) => {
+    setEditingProduct(product); // Set the product to be edited in the state
+    navigate(`/edit-products/${product._id}`); // Navigate to the edit product page
+  };
   
 
   return (
@@ -68,7 +78,7 @@ const ProductTable = () => {
               <td>${product.quantity}</td>
               <td>
                 <DeleteIcon className="icon" onClick={() => handleDelete(product._id)} />
-                <EditIcon className="icon" />
+                <EditIcon className="icon" onClick={() => handleEditClick(product)} />
                 <StarIcon className="icon" />
               </td>
             </tr>
