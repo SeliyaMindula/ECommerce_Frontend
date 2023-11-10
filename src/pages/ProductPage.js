@@ -28,7 +28,7 @@ const ProductPage = () => {
     const formData = new FormData();
     formData.append('sku', product.sku);
     formData.append('name', product.name);
-    formData.append('qty', product.qty);
+    formData.append('quantity', product.qty);
     formData.append('description', product.description);
 
     // Append images to formData
@@ -37,7 +37,7 @@ const ProductPage = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:5000/api/products/add', formData, {
+      const response = await axios.post('http://localhost:5000/api/products/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
