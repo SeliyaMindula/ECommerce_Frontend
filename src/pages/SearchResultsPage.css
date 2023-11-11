@@ -1,38 +1,29 @@
-.search-results-page {
-    padding: 20px;
-  }
-  
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .new-product-button {
-    /* Add styles for the 'New Product' button */
-  }
-  
-  .results-list {
-    /* Add styles for the search results list */
-  }
-  
-  .product-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Add more styles to match the design */
-  }
-  
-  .product-info h3 {
-    /* Styles for product name */
-  }
-  
-  .product-info p {
-    /* Styles for product description */
-  }
-  
-  .favorite-button {
-    /* Styles for favorite button, maybe use a star icon */
-  }
-  
+.results-container {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+
+.product-item {
+  border-bottom: 1px solid #ccc; 
+  padding: 16px; 
+}
+
+.product-sku {
+  font-weight: bold;
+  margin-bottom: 1px; 
+  color: #001EB9; 
+}
+
+.product-name {
+  font-size: 18px; 
+  margin-bottom: 1px; 
+  color: #162427;
+};
+
+.product-description {
+  font-size: 12px; 
+  color: #969191; 
+};
+
