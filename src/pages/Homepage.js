@@ -7,6 +7,7 @@ import FavoriteButton from '../components/FavoriteButton';
 import ProductTable from '../components/ProductTable';
 import './Homepage.css'// ... Import other necessary components
 import { useNavigate } from 'react-router-dom';
+import HomeButton from '../components/HomeButton';
 
 
 const HomePage = () => {
@@ -47,12 +48,18 @@ const HomePage = () => {
     console.log('Favorite button clicked');
   };
 
+  const handleHome = () => {
+    navigate('/');
+    console.log('Favorite button clicked');
+  };
+
   return (
     <div className="homepage">
       <Header />
-      <h1 style={{ paddingLeft: '60px' }}>PRODUCTS</h1>
+      <span style={{ paddingLeft: '60px',fontWeight: 'bold',fontSize: '40px' }}>PRODUCTS</span>
       <div className="search-and-add">
         <SearchBar onSearch={handleSearch} />
+        <HomeButton onHome={handleHome}/>
         <NewProductButton onAddProduct={handleAddProduct} />
         <FavoriteButton onFavorite={handleFavorite}/>
       </div>

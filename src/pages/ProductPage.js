@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from 'axios'; // Import Axios
 import Header from "../components/Header";
 import "./Productpage.css";
+import HomeButton from '../components/HomeButton';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const ProductPage = () => {
   const [product, setProduct] = useState({
@@ -63,11 +67,26 @@ const ProductPage = () => {
       alert('Failed to add product. Please try again.');
     }
   };
+  let navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate('/');
+    console.log('home button clicked');
+  };
+
 
   return (
     <>
       <Header />
-      <h1 style={{ paddingLeft: "140px" }}>PRODUCTS</h1>
+      <div className="search-and-add">
+        <div style={{ paddingLeft: "80px",display: 'flex', alignItems: 'center' }}>
+          <span style={{ marginRight: '10px',fontWeight: 'bold',fontSize: '40px' }}>PRODUCTS</span>
+          <span>{'>'}</span>
+          <span style={{ marginLeft: '10px', fontWeight: 'bold', color: '#001EB9',fontSize: '30px' }}>Add product</span>
+        </div>
+        <HomeButton onHome={handleHome}/>
+      </div>
+     
       <form onSubmit={handleSubmit} className="form-margin">
         <div className="form-group row">
           <label htmlFor="sku" className="col-sm-2 col-form-label">

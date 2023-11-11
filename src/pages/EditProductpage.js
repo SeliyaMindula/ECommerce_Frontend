@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import './Productpage.css';
+import HomeButton from '../components/HomeButton';
+import { useNavigate } from 'react-router-dom';
 
 const EditProductPage = () => {
   const [product, setProduct] = useState({
@@ -75,11 +77,24 @@ const EditProductPage = () => {
       setNotification('Failed to update product. Please try again.');
     }
   };
+  let navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate('/');
+    console.log('home button clicked');
+  };
 
   return (
     <>
       <Header />
-      <h1 style={{ paddingLeft: "140px" }}>Edit Product</h1>
+      <div className="search-and-add">
+      <div style={{ paddingLeft: "80px",display: 'flex', alignItems: 'center' }}>
+        <span style={{ marginRight: '10px',fontWeight: 'bold',fontSize: '40px' }}>PRODUCTS</span>
+        <span>{'>'}</span>
+        <span style={{ marginLeft: '10px', fontWeight: 'bold', color: '#001EB9',fontSize: '30px' }}>Edit product</span>
+      </div>
+      <HomeButton onHome={handleHome}/>
+      </div>
       {notification && <div className="alert alert-info">{notification}</div>}
       <form onSubmit={handleSubmit} className="form-margin">
         <div className="form-group row">
